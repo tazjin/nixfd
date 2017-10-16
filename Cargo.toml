@@ -2,3 +2,10 @@
 name = "nixfd"
 version = "0.1.0"
 authors = ["Vincent Ambo <tazjin@gmail.com>"]
+
+[dependencies]
+# This dependency is not needed, but NixOS can't build Rust packages that don't
+# have dependencies - which is of course an issue for a project that only uses
+# the standard library.
+# Tracking issue: https://github.com/NixOS/nixpkgs/issues/22737
+libc = "0.2"
