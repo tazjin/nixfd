@@ -57,7 +57,7 @@ fn cache_reload_required(path: &str) -> Option<File> {
         Ok(f) => f,
         Err(e) => {
             if e.kind() == ErrorKind::NotFound {
-                File::create(path.to_string()).expect("Could not create cache file")
+                return Some(File::create(path.to_string()).expect("Could not create cache file"))
             } else {
                 panic!("Could not open cache file '{}': {}", path, e)
             }
