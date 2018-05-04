@@ -1,3 +1,7 @@
+**Note**: Nix 2.0 contains a new `nix search` command which supports caching. You may want to use that instead of `nixfd`!
+
+------------
+
 nixfd
 =====
 
